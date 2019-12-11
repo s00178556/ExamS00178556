@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamS00178556
 {
-    private static Random rng = new Random();
+   // private static Random rng = new Random();
     public enum Position { Goalkeeper, Defender, Midfielder, Forward}
     public class Player
 
