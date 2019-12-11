@@ -5,16 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamS00178556"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="125*"/>
+        </Grid.ColumnDefinitions>
         <ListBox x:Name="lbxAllPlayers" HorizontalAlignment="Left" Height="285" Margin="97,77,0,0" VerticalAlignment="Top" Width="214"/>
-        <ListBox x:Name="lbxSelectedPlayers" HorizontalAlignment="Left" Height="285" Margin="492,77,0,0" VerticalAlignment="Top" Width="214"/>
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="375,126,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="375,248,0,0" VerticalAlignment="Top" Width="75" Click="BtnRemove_Click"/>
+        <ListBox x:Name="lbxSelectedPlayers" HorizontalAlignment="Left" Height="285" Margin="75.043,77,0,0" VerticalAlignment="Top" Width="214" Grid.Column="1"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="375,126,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="BtnAdd_Click"/>
+        <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="375,248,0,0" VerticalAlignment="Top" Width="75" Click="BtnRemove_Click" Grid.ColumnSpan="2"/>
         <Label Content="All Players" HorizontalAlignment="Left" Margin="97,46,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label Content="Selected Players" HorizontalAlignment="Left" Margin="492,46,0,0" VerticalAlignment="Top" Width="102"/>
-        <Label Content="Spaces" HorizontalAlignment="Left" Margin="492,375,0,0" VerticalAlignment="Top" Width="82"/>
-        <TextBlock x:Name="txtblkSpaces" HorizontalAlignment="Left" Margin="566,380,0,0" TextWrapping="Wrap" Text=": " VerticalAlignment="Top" Width="78"/>
+        <Label Content="Selected Players" HorizontalAlignment="Left" Margin="75.043,46,0,0" VerticalAlignment="Top" Width="102" Grid.Column="1"/>
+        <Label Content="Spaces" HorizontalAlignment="Left" Margin="75.043,375,0,0" VerticalAlignment="Top" Width="82" Grid.Column="1"/>
+        <TextBlock x:Name="txtblkSpaces" HorizontalAlignment="Left" Margin="149.043,380,0,0" TextWrapping="Wrap" Text=": " VerticalAlignment="Top" Width="78" Grid.Column="1"/>
         <Label Content="Formation" HorizontalAlignment="Left" Margin="153,10,0,0" VerticalAlignment="Top" Width="82"/>
         <ComboBox x:Name="comboFormation" HorizontalAlignment="Left" Margin="235,14,0,0" VerticalAlignment="Top" Width="120"/>
 

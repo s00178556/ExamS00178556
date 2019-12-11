@@ -8,7 +8,7 @@ namespace ExamS00178556
 {
    
     public enum Position { Goalkeeper, Defender, Midfielder, Forward}
-    public class Player
+    public class Player : IComparable<Player>
 
     {
 
@@ -33,6 +33,7 @@ namespace ExamS00178556
             }
         }
 
+        //Constructors
         public Player(string fname, string surname, Position typeOfPosition, DateTime dateOfBirth ) //int age
         {
             FName = fname;
@@ -47,6 +48,19 @@ namespace ExamS00178556
 
         }
 
+        //this shows the fname age and type of position when screen is loaded
+        public override string ToString()
+        {
+            return $"{FName} , {Age} , {TypeOfPosition}";
+        }
+
+
+        //icomparable sorts players by position
+        public int CompareTo(Player other)
+        {
+            return TypeOfPosition.CompareTo(other.TypeOfPosition);
+        }
+       
 
     }
 }
