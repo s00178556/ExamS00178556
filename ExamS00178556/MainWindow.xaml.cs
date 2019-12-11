@@ -20,6 +20,8 @@ namespace ExamS00178556
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private static Random rng = new Random();
         public MainWindow()
         {
             InitializeComponent();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamS00178556
 {
-   // private static Random rng = new Random();
+   
     public enum Position { Goalkeeper, Defender, Midfielder, Forward}
     public class Player
 
@@ -32,6 +32,21 @@ namespace ExamS00178556
                 return age;
             }
         }
-        
+
+        public Player(string fname, string surname, Position typeOfPosition, DateTime dateOfBirth ) //int age
+        {
+            FName = fname;
+            Surname = surname;
+            TypeOfPosition = typeOfPosition;
+            DateOfBirth = dateOfBirth;
+            //Age = age;
+        }
+
+        public Player()
+        {
+
+        }
+
+
     }
 }
